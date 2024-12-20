@@ -1,6 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:remote_task/AppUtils/Utils.dart';
 import 'package:remote_task/product/product_event.dart';
 import 'package:remote_task/product/product_state.dart';
 import '../services/ApiService.dart';
@@ -59,8 +60,12 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
   _fetchProductData(FetchProducts event, emit) async {
     try {
         emit(ProductLoading());
-        final products = await apiService.fetchProducts();
-        emit(ProductLoaded(products));
+        if (await checkInternetConnection()) {
+          final products = await apiService.fetchProducts();
+          emit(ProductLoaded(products));
+        } else {
+          emit(ProductError("No internet connection"));
+        }
       } catch (e) {
       emit(ProductError("Failed to load products"));
       }

@@ -9,6 +9,7 @@ class ApiService {
 
   Future<List<Product>> fetchProducts() async {
 
+
     final response = await http.get(Uri.parse(Constant.base_url));
     if (response.statusCode == 200) {
       List<dynamic> jsonResponse = json.decode(response.body.toString());
