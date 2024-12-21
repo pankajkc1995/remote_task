@@ -1,13 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mockito/mockito.dart';
-import 'package:http/http.dart' as http;
 import 'package:remote_task/appController.dart';
-import 'package:remote_task/models/product.dart';
-import 'dart:convert';
-
-import 'package:remote_task/product/product_bloc.dart';
-import 'package:remote_task/product/product_event.dart';
-import 'package:remote_task/product/product_state.dart';
 import 'package:remote_task/services/apiService.dart';
 
 
