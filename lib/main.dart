@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:remote_task/AppUtils/app_color.dart';
 import 'package:remote_task/screens/product_view.dart';
-import 'services/ApiService.dart';
+import 'services/apiService.dart';
 import 'product/product_bloc.dart';
 import 'product/product_event.dart';
 

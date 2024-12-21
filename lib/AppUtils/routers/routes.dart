@@ -3,8 +3,8 @@ import 'package:go_router/go_router.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:remote_task/AppUtils/routers/error_route_screen.dart';
 import 'package:remote_task/AppUtils/routers/route_name.dart';
-import 'package:remote_task/models/Product.dart';
-import 'package:remote_task/screens/DirectionsScreen.dart';
+import 'package:remote_task/models/product.dart';
+import 'package:remote_task/screens/directionsScreen.dart';
 import 'package:remote_task/screens/product_view.dart';
 
 class AppRouter {

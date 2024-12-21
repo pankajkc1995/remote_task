@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:remote_task/AppController.dart';
-import 'package:remote_task/AppUtils/routers/route_name.dart';
-import 'package:remote_task/models/Product.dart';
+import 'package:remote_task/appController.dart';
 import 'package:remote_task/product/product_event.dart';
-import '../AppUtils/Utils.dart';
-import 'DirectionsScreen.dart';
+import '../AppUtils/utils.dart';
+import 'directionsScreen.dart';
 import '../product/product_bloc.dart';
 import '../product/product_state.dart';
 
@@ -74,7 +71,7 @@ class _ProductViewState extends State<ProductView> {
                       decoration: BoxDecoration(
                           border: Border.all(
                               color: Colors.black26,
-                              width: 2,
+                              width: 1,
                               style: BorderStyle.solid),
                           borderRadius: BorderRadius.all(Radius.circular(8))),
                       margin: EdgeInsets.all(5),
@@ -90,11 +87,11 @@ class _ProductViewState extends State<ProductView> {
                           return Container(
                             width: mediaQuery.size.width * 0.2,
                             height: mediaQuery.size.height * 0.2,
-                            child: Expanded(
+                            child: Center(
                                 child: Icon(
-                              Icons.error,
-                              color: Colors.red,
-                            )),
+                                  Icons.error,
+                                  color: Colors.red,
+                                )),
                           ); // Ensure you have a placeholder image in your assets
                         }),
                         title: Text(product.title!),

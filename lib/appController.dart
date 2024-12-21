@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
-import 'models/Product.dart';
+import 'models/product.dart';
 
 class AppController{
   static void showProductDetails(Product product,BuildContext context) {

@@ -3,7 +3,7 @@ import 'package:geolocator/geolocator.dart';
 import 'package:http/http.dart' as http;
 import 'package:remote_task/AppUtils/constant.dart';
 
-import '../models/Product.dart';
+import '../models/product.dart';
 
 class ApiService {
 

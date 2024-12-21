@@ -1,10 +1,10 @@
 import 'package:bloc/bloc.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:remote_task/AppUtils/Utils.dart';
+import 'package:remote_task/AppUtils/utils.dart';
 import 'package:remote_task/product/product_event.dart';
 import 'package:remote_task/product/product_state.dart';
-import '../services/ApiService.dart';
+import '../services/apiService.dart';
 
 
 
